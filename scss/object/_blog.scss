@@ -1,0 +1,63 @@
+.blog {
+    padding-top: 80px;
+
+    .blog-cont{
+        margin-left: 28px;
+        margin-right: 28px;
+        @include overTab {
+            margin-left: 70px;
+            margin-right: 70px;
+        }
+    }
+
+    .blog-list{
+        padding-top: 60px;
+        .row{
+            display: flex;
+            + .row {
+                margin-top: 33px;
+            }
+        }
+
+        dt {
+            color: cl(white);
+            background-color: cl(primary);
+            height: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 20px;
+            width: 75px;
+            font-size: 13px;
+            @include overTab {
+                width: 157px;
+                font-size: 14px;
+            }
+        }
+
+        dd {
+            // リサイズした時に大きさ固定
+            flex:1;
+            a{
+                color: cl(white);
+                font-size: 16px;
+                text-decoration: underline;
+                @include overTab {
+                    font-size: 24px;
+                }
+            }
+            
+        }
+    }
+
+    .blog-item-btn {
+        padding-top: 40px;
+        @include overTab {
+            padding-top: 50px;
+        }
+        a {
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+}

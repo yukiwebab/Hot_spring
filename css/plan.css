@@ -1,0 +1,56 @@
+.plan {
+  padding-top: 80px;
+}
+
+.rec {
+  padding: 60px;
+}
+
+.rec .plan-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: reverse;
+      -ms-flex-flow: column-reverse;
+          flex-flow: column-reverse;
+  border-radius: 8px;
+  overflow: hidden;
+  margin-left: 10px;
+  margin-left: 10px;
+}
+
+.rec .plan-item .plan-text {
+  background-color: cl(white);
+  padding: 25px 25px 50px 25px;
+}
+
+.rec .plan-item .title {
+  color: cl(text);
+}
+
+.rec .plan-item .plan-text-money {
+  color: cl(text);
+  padding-top: 60px;
+}
+
+.rec .plan-item .plan-text-money > span {
+  color: cl(red);
+}
+
+.service .plan-service-list {
+  background-color: cl(grey);
+}
+
+.service .plan-service-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.service .plan-service-image {
+  width: 160px;
+  margin-left: auto;
+  margin-right: auto;
+}
+/*# sourceMappingURL=plan.css.map */

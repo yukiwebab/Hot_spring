@@ -1,0 +1,104 @@
+.plan {
+    padding-top: 80px;
+    .inner {
+
+    }
+}
+
+.rec {
+    padding: 60px;
+    .plan-list{
+    }
+
+    .plan-item {
+        display: flex;
+        flex-flow: column-reverse;
+        border-radius: 8px;
+        overflow: hidden;
+        margin-left: 26px;
+        margin-right: 27px;
+        @include overTab {
+            margin-left: 10px;
+            margin-right: 10px;
+        }
+        .plan-text {
+            background-color: cl(white);
+            padding: 25px 25px 50px 25px;
+        }
+        .title{
+            color: cl(text);
+        }
+        .plan-image {
+
+        }
+
+        .plan-text-money {
+            color: cl(text);
+            padding-top: 60px;
+            >span{
+                color: cl(red);
+            }
+        }
+
+    }
+
+}
+
+.service {
+    .plan-service-wrap {
+        padding-top: 80px;
+        @include overTab {
+            padding-top: 100px;
+        }
+    }
+
+    .plan-service-list{
+        padding-left: 40px;
+        padding-right: 40px;
+        @include overTab {
+            display: flex;
+        }
+
+    }
+
+    .plan-service-item{
+        background-color: cl(lightgrey);
+        // display: flex;
+        
+        + .plan-service-item{
+            margin-top: 30px;
+            @include overTab {
+                margin-left: 20px;
+                margin-top: 0;
+            }
+        }
+        @include overTab {
+            width: percentage(390 / 1200);
+        }
+
+        .plan-service-image{
+            width: 160px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .plan-service-text {
+            font-size: 28px;
+            text-align: center;
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+
+        .plan-service-box {
+            padding-top: 40px;
+            font-size: 15px;
+            padding-left: 20px;
+            padding-right: 20px;
+            padding-bottom: 50px;
+        }
+    }
+
+
+
+    
+}

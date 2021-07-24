@@ -1,0 +1,36 @@
+@media print, screen and (min-width: 768px) {
+  ._sp {
+    display: none;
+  }
+}
+
+._pc {
+  display: none;
+}
+
+@media print, screen and (min-width: 768px) {
+  ._pc {
+    display: block;
+  }
+}
+
+body {
+  font-size: 16px;
+  line-height: 1.5;
+  font-family: 'Hiragino Mincho Pro', serif;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+.header {
+  background-color: #4D0000;
+}
+/*# sourceMappingURL=style.css.map */

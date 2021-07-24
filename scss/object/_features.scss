@@ -1,0 +1,100 @@
+.features{
+    padding-top: 80px;
+    .inner{
+
+    }
+
+    .features-cont {
+        margin-top: 60px;
+    }
+
+    .features-list {
+
+    }
+
+    .features-item {
+        // flex-flow: column-reverse;
+        @include overTab {
+            display: flex;
+        }
+        +.features-item {
+            padding-top: 60px;
+            @include overTab {
+                padding-top: 0;
+            }
+        }
+        color: cl(white);
+        // even：偶数、odd：奇数
+        &:nth-child(odd){
+            .img {
+                @include overTab {
+                    margin-right: 40px;
+                }
+            }
+            .text {
+                @include overTab {
+                    margin-right: 40px;
+                }
+            }
+        }
+        &:nth-child(even){
+            flex-flow:row-reverse;
+            .img {
+                @include overTab {
+                    margin-left: 40px;
+                }
+            }
+            .text {
+                @include overTab {
+                    margin-left: 40px;
+                }
+            }
+        }
+        .text{
+            padding-left: 28px;
+            padding-right: 28px;
+            padding-top: 40px;
+            @include overTab {
+            // 画像に対しての自動計算
+                flex: 1;
+                padding-left: 0;
+                padding-right: 0;
+            }
+        }
+        .desc {
+            font-size: 16px;
+            margin-top: 50px;
+            @include overTab {
+                font-size: 18px;
+            }
+        }
+
+        .img {
+            @include overTab {
+                // 640：画像幅、1280:全体の横幅は1280
+                width: percentage(640/1280);
+            }
+        }
+        .btn {
+            text-align: center;
+            padding-bottom: 62px;
+            padding-top: 60px;
+            a {
+                margin-right: auto;
+                margin-left: auto;
+            }
+            @include overTab {
+                
+            }
+
+        }
+        .title {
+            color: cl(baige);
+            font-size: 18px;
+            @include overTab {
+                font-size: 28px;
+            }
+        }
+    }
+
+}

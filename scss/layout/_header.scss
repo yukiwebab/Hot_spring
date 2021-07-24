@@ -1,0 +1,145 @@
+.header {
+    .header-fixed {
+        background-color: cl(primary);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        z-index: 2;
+    }
+
+    .header-logo {
+        width: 150px;
+        margin-left: 30px;
+    }
+
+    .nav-btn {
+        // ハンバーガーメニュー
+        width: 52px;
+        height: 30px;
+        appearance: none;
+        background: transparent;
+        border:none;
+        font: inherit;
+        outline: none;
+        position: relative;
+        right: 30px;
+        @include overTab {
+            display: none;
+        }
+        &.-active{
+            span {
+                top: 0;
+                bottom: 0;
+                margin: auto;
+                // 動き滑らかに↓
+                transition: transform 0.3s ease;
+                &:first-child {
+                    // 斜めにする
+                    transform: rotate(45deg);
+                }
+                &:nth-child(2) {
+                    transform: rotate(45deg);
+                }
+                &:last-child {
+                    transform: rotate(-45deg);
+                }
+            }
+        }
+        span {
+            position: absolute;
+            width: 100%;
+            height: 3px;
+            background-color: cl(white);
+            display: block;
+            transition: transform 0.3s ease;
+            &:first-child {
+                top: 0;
+            }
+            &:nth-child(2) {
+                top: 0;
+                bottom: 0;
+                margin: auto;
+            }
+            &:last-child {
+                bottom: 0;
+            }
+        }
+    }
+
+    .header-nav{
+
+    }
+
+    .nav {
+        // スマホ対応
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100%;
+        background-color: #000000CC;
+        // ヘッダー分の高さ（100px）＋宿泊予約の高さ（45px）
+        padding-top: 145px;
+        // CSS重なり順指定
+        z-index: 1;
+        text-align: center;
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.3s ease;
+        @include overTab {
+            // PCで（リサイズした時）反映されないように↓
+            // position: static;
+            width: initial;
+            background-color: transparent;
+            padding-top: 0;
+            z-index: 3;
+            // 親要素を受け継ぐ（初期化する）↓
+            left: inherit;
+            right: 0;
+            top: 38px;
+            opacity: 1;
+            visibility: visible;
+        }
+        &.-active {
+            opacity: 1;
+            visibility: visible;
+            transition: opacity 0.3s ease;
+
+        }
+    }
+
+    .nav-list {
+        padding-bottom: 45px;
+        @include overTab {
+            display: flex;
+            margin-right: 40px;
+            padding-bottom: 0;
+        }
+        
+        .item{
+            // 二つ目以降のitem
+            +.item{
+                margin-top: 20px;
+                    @include overTab {
+                    margin-left: 20px;
+                    margin-top: 0;
+                    }
+            }
+        }
+        a {
+            font-size: 24px;
+            color: cl(white);
+            @include overTab {
+                font-size: 18px;
+            }
+
+        }
+
+    }
+
+}
